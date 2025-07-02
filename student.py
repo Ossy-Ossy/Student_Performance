@@ -4,14 +4,14 @@ import joblib
 import streamlit as st
 
 
-x = pd.read_csv("C:\\Users\\hp\\Downloads\\x_student_performance.csv")
+x = pd.read_csv("x_student_performance.csv")
 x.drop(x.columns[0] ,axis = 1,inplace = True)
 
-df = pd.read_csv("C:\\Users\\hp\\Downloads\\student.csv")
+df = pd.read_csv("student.csv")
 df.columns = df.columns.str.strip()
 
-model = joblib.load("C:\\Users\\hp\\Downloads\\model_student.joblib")
-scaler = joblib.load("C:\\Users\\hp\\Downloads\\scaler_student.joblib")
+model = joblib.load("model_student.joblib")
+scaler = joblib.load("scaler_student.joblib")
 
 st.write("""
 # Welcome to the AI-Powered Student Performance Prediction System   
